@@ -1,0 +1,98 @@
+﻿@model DataLayer.Page
+
+@{
+	ViewBag.Title = "Details";
+}
+<br />
+<br />
+<br />
+<h2>جزئیات خبر</h2>
+
+<div>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.pageGroup.GroupTitle)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.pageGroup.GroupTitle)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Title)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Title)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.ShortDescription)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.ShortDescription)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Text)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Text)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Visit)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Visit)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.ImageName)
+		</dt>
+
+		<dd>
+			@if (Model.ImageName != null)
+			{
+				<img src="~/PageImages/@Model.ImageName" class="thumbnail" style="max-width:150px" />
+			}
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.ShowSlider)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.ShowSlider)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CreateDate)
+		</dt>
+
+		<dd>
+			@Model.CreateDate.ToShamsi();
+		</dd>
+
+	</dl>
+</div>
+@using (Html.BeginForm())
+{
+
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-10" style="font-size:12px;font-weight:bold;margin-right:85px">
+			<a class="btn btn-warning" href="~/Admin/Pages/Edit/@Model.PageID">
+				<i class="glyphicon glyphicon-edit"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="form-actions no-color" style="font-size:16px;float:left">
+		@Html.ActionLink("بازگشت", "Index")
+	</div>
+	<br />
+}
+

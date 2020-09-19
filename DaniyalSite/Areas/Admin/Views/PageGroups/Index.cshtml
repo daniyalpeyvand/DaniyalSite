@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DataLayer.PageGroup>
+
+@{
+	ViewBag.Title = "خانه";
+}
+
+<br />
+<br />
+
+<h2>لیست عناوین</h2>
+
+<p>
+	<a class="btn btn-info" href="~/Admin/PageGroups/Create" style="color:black">افزودن عنوان جدید</a>
+</p>
+<br />
+<table class="table table-bordered" style="background-color:#F9F9F9;border:1px solid black">
+	<tr style="border:1px solid black">
+		<th style="border:1px solid black ;font-size:17px">
+			عنوان گروه
+		</th>
+		<th style="border:1px solid black;font-size:17px">
+			دستورات
+		</th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr style="		border: 1px solid black
+">
+			<td style="border:1px solid black;font-size:17px">@item.GroupTitle</td>
+			<td style="border:1px solid black">
+
+				<a class="btn btn-info" href="~/Admin/PageGroups/Details/@item.GroupID">
+					<i class="glyphicon glyphicon-list"></i>
+				</a>
+				<a class="btn btn-warning" href="~/Admin/PageGroups/Edit/@item.GroupID">
+					<i class="glyphicon glyphicon-edit"></i>
+				</a>
+				<a class="btn btn-danger" href="~/Admin/PageGroups/Delete/@item.GroupID">
+					<i class="glyphicon glyphicon-trash"></i>
+				</a>
+			</td>
+		</tr>
+
+
+	}
+</table>
+@*<table class="table">
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.GroupTitle)
+			</th>
+			<th></th>
+		</tr>
+
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.GroupTitle)
+				</td>
+				<td>
+					@Html.ActionLink("Edit", "Edit", new { id = item.GroupID }) |
+					@Html.ActionLink("Details", "Details", new { id = item.GroupID }) |
+					@Html.ActionLink("Delete", "Delete", new { id = item.GroupID })
+				</td>
+			</tr>
+		}
+
+	</table>*@

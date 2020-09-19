@@ -1,0 +1,34 @@
+﻿@model DataLayer.PageGroup
+
+@{
+	ViewBag.Title = "Delete";
+}
+<link href="~/Content/Delete.css" rel="stylesheet" />
+<br />
+<br />
+<h3> آیا از حذف عنوان "@Model.GroupTitle" اطمینان دارید؟</h3>
+<div>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.GroupTitle)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.GroupTitle)
+		</dd>
+	</dl>
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+		<div class="form-group">
+			<div lass="col-md-offset-2 col-md-10" style="font-size:12px;font-weight:bold;margin-right:100px">
+				<input type="submit" value="حذف عنوان" class="btn btn-danger" />
+			</div>
+			<div class="form-actions no-color" style="font-size:16px;float:left">
+				@Html.ActionLink("بازگشت", "Index")
+			</div>
+		</div>
+		<br />
+	}
+</div>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaniyalSite", "DaniyalSite\DaniyalSite.csproj", "{11882A64-3555-49F3-9DC8-DA1B33D2F0FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{3B5CC509-3FB2-43D1-9206-8893503FE5FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11882A64-3555-49F3-9DC8-DA1B33D2F0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11882A64-3555-49F3-9DC8-DA1B33D2F0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11882A64-3555-49F3-9DC8-DA1B33D2F0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11882A64-3555-49F3-9DC8-DA1B33D2F0FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5CC509-3FB2-43D1-9206-8893503FE5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5CC509-3FB2-43D1-9206-8893503FE5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5CC509-3FB2-43D1-9206-8893503FE5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5CC509-3FB2-43D1-9206-8893503FE5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5403C9AB-435F-4F97-93BB-F3B0CF003397}
+	EndGlobalSection
+EndGlobal

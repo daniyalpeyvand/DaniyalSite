@@ -1,0 +1,39 @@
+﻿@model DataLayer.PageGroup
+
+@{
+	ViewBag.Title = "Details";
+}
+<br />
+<br />
+<br />
+<h2>جزئیات عنوان</h2>
+
+<div>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.GroupTitle)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.GroupTitle)
+		</dd>
+
+	</dl>
+	@using (Html.BeginForm())
+	{
+
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10" style="font-size:12px;font-weight:bold;margin-right:85px">
+				<a class="btn btn-warning" href="~/Admin/PageGroups/Edit/@Model.GroupID">
+					<i class="glyphicon glyphicon-edit"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="form-actions no-color" style="font-size:16px;float:left">
+			@Html.ActionLink("بازگشت", "Index")
+		</div>
+		<br />
+	}
+</div>
